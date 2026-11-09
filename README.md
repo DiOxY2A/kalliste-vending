@@ -52,7 +52,8 @@ Les textes reprennent le site actuel. J'ai ajouté quelques formulations qu'il f
 3. **Le comparatif bonbonne / réseau** : il découle de votre texte « Écologie ».
 4. **« LAVAZZA »** est écrit en texte : si vous avez le droit d'utiliser leur logo officiel, remplacez-le.
    Même chose pour le **logo Nescafé** : vérifiez que votre accord avec la marque autorise son affichage.
-5. **Les mentions légales** : remplir les champs entre crochets (Kbis).
+5. **Les mentions légales** : remplies d'après le Kbis du 25/02/2025. Il reste l'adresse e-mail de contact
+   (deux endroits marqués `[adresse e-mail]` dans `mentions-legales/index.html`).
 
 ## Crédits photos
 
@@ -79,8 +80,10 @@ le fichier en gardant le même nom : ce sera encore plus parlant que des photos 
 
 ## Configurer le formulaire
 
-Comme pour le premier site : créez un formulaire gratuit sur https://formspree.io et collez
-son adresse dans `assets/js/main.js` (constante `FORM_ENDPOINT`, ligne 4).
+Le formulaire de devis envoie les demandes via Formspree (https://formspree.io), au formulaire
+`https://formspree.io/f/xoeeogkz` (constante `FORM_ENDPOINT`, ligne 4 de `assets/js/main.js`).
+Les e-mails arrivent avec l'objet « Demande de devis – site Kalliste Vending ». Un champ caché
+(`_gotcha`) bloque une partie des robots de spam. Pour changer de formulaire, remplacez simplement l'adresse.
 
 ## Mettre en ligne pour tester
 
@@ -95,8 +98,11 @@ son adresse dans `assets/js/main.js` (constante `FORM_ENDPOINT`, ligne 4).
 
 À faire **avant** de brancher le domaine :
 
-- configurer le formulaire (voir plus haut), sinon les demandes de devis ne partent pas ;
-- remplir les mentions légales (champs entre crochets) : elles sont obligatoires pour un site professionnel.
+- formulaire : fait (voir plus haut) ;
+- mentions légales : ajouter l'adresse e-mail de contact (obligatoire pour un site professionnel).
+
+Le domaine est en cours de transfert de Jimdo vers OVH (commande du 9 novembre 2026, serveurs DNS OVH).
+Dans la zone DNS OVH, ne modifiez que les lignes A et `www` : gardez les lignes MX si une adresse e-mail OVH est utilisée.
 
 Ensuite :
 

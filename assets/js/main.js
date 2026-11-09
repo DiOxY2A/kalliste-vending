@@ -1,7 +1,7 @@
 /* Kalliste Vending — site de test : interactions (sans dépendance) */
 
 /* Adresse du formulaire Formspree (https://formspree.io) — voir README.md */
-const FORM_ENDPOINT = "https://formspree.io/f/VOTRE_ID_FORMSPREE";
+const FORM_ENDPOINT = "https://formspree.io/f/xoeeogkz";
 
 (() => {
   "use strict";
