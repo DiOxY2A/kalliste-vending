@@ -162,9 +162,11 @@ em.accent, .accent-copper { font-style: italic; color: var(--copper); }
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img {
-  width: 64px; height: 64px; object-fit: contain;
-  background: #fff; border-radius: 16px; padding: 4px;
+  width: 84px; height: 84px; object-fit: contain;
+  background: #fff; border-radius: 18px; padding: 5px;
+  transition: width .4s var(--ease), height .4s var(--ease);
 }
+.site-header.is-solid .brand img { width: 66px; height: 66px; border-radius: 15px; }
 .brand span { font-family: var(--serif); font-size: 21px; letter-spacing: -.01em; line-height: 1; }
 .brand small { display: block; font-family: var(--sans); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; opacity: .65; margin-top: 4px; }
 
@@ -788,7 +790,8 @@ a.contact-card:hover { background: var(--roast); border-color: var(--copper); }
   .page-hero { min-height: 70vh; padding-top: 140px; }
   .hero { padding-top: 130px; }
   .brand span { font-size: 18px; }
-  .brand img { width: 54px; height: 54px; border-radius: 14px; }
+  .brand img { width: 68px; height: 68px; border-radius: 15px; padding: 4px; }
+  .site-header.is-solid .brand img { width: 56px; height: 56px; border-radius: 13px; }
 
   /* bandeaux photo des pages intérieures : voile plus dense pour la lisibilité */
   .page-hero::after { background: linear-gradient(180deg, rgba(22, 17, 14, .55) 0%, rgba(22, 17, 14, .6) 45%, rgba(22, 17, 14, .92) 100%); }
