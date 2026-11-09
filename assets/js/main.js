@@ -103,11 +103,23 @@ const FORM_ENDPOINT = "https://formspree.io/f/xoeeogkz";
       say("Envoi en cours…");
       try {
         const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-        if (!res.ok) throw new Error(String(res.status));
+        if (!res.ok) {
+          // Formspree renvoie le motif du refus en JSON : on l'affiche pour pouvoir le corriger
+          let detail = "code " + res.status;
+          try {
+            const data = await res.json();
+            const msgs = (data.errors || []).map((er) => er.message).filter(Boolean);
+            if (msgs.length) detail = msgs.join(" ; ");
+            else if (data.error) detail = data.error;
+          } catch (_) { /* réponse non JSON */ }
+          throw new Error(detail);
+        }
         form.reset();
         say("Merci ! Votre demande a bien été envoyée.", "ok");
-      } catch {
-        say("Oups, l'envoi a échoué. Réessayez ou appelez le 04 95 20 31 34.", "err");
+      } catch (err) {
+        const why = err && err.message ? err.message : "connexion impossible";
+        console.error("Envoi du formulaire :", err);
+        say("Oups, l'envoi a échoué (" + why + "). Réessayez ou appelez le 04 95 20 31 34.", "err");
       } finally {
         btn.disabled = false;
       }
