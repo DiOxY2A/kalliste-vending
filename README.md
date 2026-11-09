@@ -52,8 +52,8 @@ Les textes reprennent le site actuel. J'ai ajouté quelques formulations qu'il f
 3. **Le comparatif bonbonne / réseau** : il découle de votre texte « Écologie ».
 4. **« LAVAZZA »** est écrit en texte : si vous avez le droit d'utiliser leur logo officiel, remplacez-le.
    Même chose pour le **logo Nescafé** : vérifiez que votre accord avec la marque autorise son affichage.
-5. **Les mentions légales** : remplies d'après le Kbis du 25/02/2025. Il reste l'adresse e-mail de contact
-   (deux endroits marqués `[adresse e-mail]` dans `mentions-legales/index.html`).
+5. **Les mentions légales** : remplies d'après le Kbis du 25/02/2025, avec l'e-mail public
+   contact@kallistevending.fr (aussi affiché dans le bloc Contact de l'accueil et dans les pieds de page).
 
 ## Crédits photos
 
@@ -99,7 +99,7 @@ Les e-mails arrivent avec l'objet « Demande de devis – site Kalliste Vending 
 À faire **avant** de brancher le domaine :
 
 - formulaire : fait (voir plus haut) ;
-- mentions légales : ajouter l'adresse e-mail de contact (obligatoire pour un site professionnel).
+- mentions légales : faites.
 
 Le domaine est en cours de transfert de Jimdo vers OVH (commande du 9 novembre 2026, serveurs DNS OVH).
 Dans la zone DNS OVH, ne modifiez que les lignes A et `www` : gardez les lignes MX si une adresse e-mail OVH est utilisée.
